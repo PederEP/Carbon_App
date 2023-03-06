@@ -17,7 +17,7 @@ Navbar (a menu): #2a4359
 }
 body {
   font-family: 'Roboto', sans-serif;
-  background: #466fa6;
+  background: #fff;
   line-height: 1.6;
 }
 .container {
@@ -45,7 +45,7 @@ img {
 }
 /* Navbar  */
 .section_carbon_app_navbar {
-  background-color:#607D8B;
+  background-color:#8bbbd9;
 }
 .carbon_app_navbar {
   display: flex;
@@ -53,18 +53,18 @@ img {
   justify-content: flex-start;
   height: 70px;
   align-items: center;
-  background-color: #607D8B;
+  background-color: #8bbbd9;
   padding: 0 0px;
 }
 .carbon_app_navbar a {
-  color: #333 ;
+  color: #2a4359;
   padding: 10px 20px;
   margin: 0 5px;
   font-size: 20px;
   text-decoration: none;
 }
 .carbon_app_navbar a:hover{
-  border-bottom: #333  4px solid;
+  border-bottom: #2a4359 4px solid;
 }
 .carbon_app_navbar ul {
   display: flex;
@@ -74,11 +74,11 @@ img {
   font-weight: 400;
 }
 .text-logo {
-  color: #333;
+  color: #568c63;
 }
 /* Footer  */
 .section_footer{
-  background-color:#607D8B;
+  background-color:#8bbbd9;
 }
 .footer {
   display: flex;
@@ -86,7 +86,7 @@ img {
   justify-content: center;
   height: 70px;
   align-items: center;
-  background-color: #607D8B;
+  background-color: #8bbbd9;
   padding: 0 0px;
 }
 
@@ -94,7 +94,7 @@ img {
 /* Media query */
 @media(max-width:768px){
   .carbon_app_navbar {
-    height: 180px;
+    height: 160px;
     flex-direction: column;
   }
   .carbon_app_navbar a {
@@ -106,7 +106,7 @@ img {
     flex-direction: column;
   }
   .carbon_app_navbar a:hover{
-    color: #eeac99;
-    border-bottom: #eeac99 2px solid;
+    color: #568c63;
+    border-bottom: #2a4359 2px solid;
   }
 }
