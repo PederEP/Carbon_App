@@ -12,16 +12,16 @@ p {
 }
 /* Section header_home */
 .section_header_home {
-  background: color #466fa6;;
+  background-color:#9fa7bf;
 }
 .header_home {
   display: flex;  
   align-items: start;
-  background: #466fa6;
+  background: #9fa7bf;
 }
 .header_home .box {
   flex: 1;
-  background: #466fa6;
+  background: #9fa7bf;
   color: #fff;
   border-radius: 10px;
   margin: 20px 10px;
@@ -48,7 +48,7 @@ p {
 .container_buttons_links_header_home btn {
   width: 100px;
   height: 100px;
-  background: #b9936c;
+  background: #9fa7bf;
   color: #fff;
   display: flex;
   justify-content:center;
@@ -56,16 +56,16 @@ p {
 }
 /* Section developers */
 .section_developers {
-  background-color:#CCCCCC ;
+  background-color:#c5c8d9;
 }
 .developers {
   display: flex;  
   align-items: start;
-  background: #CCCCCC ;
+  background: #c5c8d9;
 }
 .developers .box {
   flex: 1;
-  background:  #466fa6;
+  background: #49736f;
   color: black;
   border-radius: 10px;
   margin: 20px 10px;
@@ -83,7 +83,48 @@ p {
 .developers .box:nth-of-type(3) {
   flex-grow:4;
 }
-
+.developers .box2 {
+  flex: 1;
+  background: #49736f;
+  color: black;
+  border-radius: 10px;
+  margin: 20px 10px;
+  padding: 15px 20px;
+  text-align:center;
+  align-items: center;
+  justify-content: center;
+}
+.developers .box2:nth-of-type(1) {
+  flex-grow:4;
+}
+.developers .box2:nth-of-type(2) {
+  flex-grow:4;
+}
+.developers .box2:nth-of-type(3) {
+  flex-grow:4;
+  background: #c5c8d9;
+}
+.developers .box3 {
+  flex: 1;
+  background: #49736f;
+  color: black;
+  border-radius: 10px;
+  margin: 20px 10px;
+  padding: 15px 20px;
+  text-align:center;
+  align-items: center;
+  justify-content: center;
+}
+.developers .box3:nth-of-type(1) {
+  flex-grow:4;
+}
+.developers .box3:nth-of-type(2) {
+  flex-grow:4;
+}
+.developers .box3:nth-of-type(3) {
+  flex-grow:4;
+  background: #c5c8d9;
+}
 .section_container_buttons_developers {
   display: flex;
   justify-content: center;
@@ -99,13 +140,13 @@ p {
   border-radius: 5px;
   text-decoration: none;
   font-size: 18px;
-  background-color: #007bff ;
-  border: 2px solid  #d6d4e0;
+  background-color: #49736f;
+  border: 2px solid  #c5c8d9;
 }
 .btn_developers:hover {
   color: #fff;
-  background-color: #d6d4e0;
-  border: 2px solid #d6d4e0;
+  background-color: #c5c8d9;
+  border: 2px solid #c5c8d9;
   text-decoration: none;
 }
 

@@ -1,11 +1,11 @@
-from flask import render_template, Blueprint
+from flask import render_template, blueprint
 
-users=Blueprint('users',__name__)
+users=blueprint('users',__name__)
 
-@users.route('/register')
+@users.routes('/register')
 def register():
-  return render_template('users/register.html', title='register')
+    return render_template('users/register.html',title='register')
 
-@users.route('/login')
+@users.routes('/login')
 def login():
-  return render_template('users/login.html', title='login')
+    return render_template('users/login.html',title='login')
