@@ -1,0 +1,148 @@
+/* Colors 
+Methodology, section 1 (header, background): #2a4359
+Methodology, section 1 (header, boxes): #6da6a6
+Methodology, section 2 (methodology, background): #466fa6
+Methodology, section 2 (methodology, boxes): #8badd9
+*/
+
+/* Utilities  */
+p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+h4 {
+  font-size: 18px;
+  text-align: left;
+  font-weight: bold;
+}
+ol {
+  font-size: 18px;
+}
+/* Section header */
+.section_header_methodology {
+  background-color:#EDF1D6;
+}
+
+.header {
+  display: flex;  
+  align-items: start;
+  background: #EDF1D6;
+}
+.header .box {
+  flex: 1;
+  background: #EDF1D6;
+  color: #40513B;
+  border-radius: 10px;
+  margin: 20px 10px;
+  padding: 15px 20px;
+  text-align:center;
+  align-items: center;
+  justify-content: center;
+}
+.header .box:nth-of-type(1) {
+  flex-grow:2;
+}
+.header .box:nth-of-type(2) {
+  flex-grow:1;
+}
+.btn {
+  display: inline-block;
+  padding: 9px 13px;
+  font-size: 22px;
+  cursor: pointer;
+  text-align: right;
+  text-decoration: none;
+  outline: none;
+  color: #EDF1D6;
+  background-color: #254762;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 7px #999;
+  margin: 15px;
+}
+  
+.btn:hover {
+  background-color: #254762e5;
+  color: #EDF1D6;
+}
+  
+.btn:active {
+  background-color: #254762;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Section methodology */
+.section_body_methodology {
+  background-color:#EDF1D6;
+  margin-top: 50px;
+  margin-left: 400px;
+  margin-right: 400px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+.methodology {
+  display: flex;  
+  background: #EDF1D6;
+  margin: 30px;
+  padding-top: 5px;
+  text-align: center;
+  padding-bottom: 5px;
+  color: #40513B;
+
+}
+/* Table with one column */
+.methodology .box_table1 {
+  flex: 1;
+  background: #CEE5D0;
+  color: #40513B;
+  border-radius: 10px;
+  margin: 5px 5px 5px 5px;
+  padding: 15px 15px;
+  text-align:center;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+}
+.methodology .box_table1:nth-of-type(1) {
+  flex-grow:1;
+  background: #CEE5D0;
+}
+.methodology .box_table1:nth-of-type(2) {
+  flex-grow:4;
+}
+.methodology .box_table1:nth-of-type(3) {
+  flex-grow:1;
+  background: #CEE5D0;
+}
+/* Table with two columns */
+.methodology .box_table2 {
+  flex: 1;
+  background: #CEE5D0;
+  color: #40513B;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  padding: 15px 15px;
+  text-align:center;
+  align-items: center;
+  justify-content: center;
+}
+.methodology .box_table2:nth-of-type(1) {
+  flex-grow:1;
+  background: #CEE5D0;
+}
+.methodology .box_table2:nth-of-type(2) {
+  flex-grow:1;
+  background: #CEE5D0;
+  
+}
+
+
+@media (max-width:768px) { 
+  .header {
+    flex-direction: column;
+  } 
+  .methodology {
+    flex-direction: column;
+  } 
+}
