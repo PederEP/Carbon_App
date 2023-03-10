@@ -12,17 +12,17 @@ p {
 }
 /* Section header_home */
 .section_header_home {
-  background: color #466fa6;;
+  background: color #EDF1D6;;
 }
 .header_home {
   display: flex;  
   align-items: start;
-  background: #466fa6;
+  background: #EDF1D6;
 }
 .header_home .box {
   flex: 1;
-  background: #466fa6;
-  color: #fff;
+  background: #EDF1D6;
+  color: #000;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -48,7 +48,7 @@ p {
 .container_buttons_links_header_home btn {
   width: 100px;
   height: 100px;
-  background: #b9936c;
+  background: #9DC088;
   color: #fff;
   display: flex;
   justify-content:center;
@@ -56,16 +56,16 @@ p {
 }
 /* Section developers */
 .section_developers {
-  background-color:#CCCCCC ;
+  background-color:#9DC088 ;
 }
 .developers {
   display: flex;  
   align-items: start;
-  background: #CCCCCC ;
+  background: #9DC088 ;
 }
 .developers .box {
   flex: 1;
-  background:  #466fa6;
+  background:  #EDF1D6;
   color: black;
   border-radius: 10px;
   margin: 20px 10px;
@@ -99,7 +99,7 @@ p {
   border-radius: 5px;
   text-decoration: none;
   font-size: 18px;
-  background-color: #007bff ;
+  background-color: #254762 ;
   border: 2px solid  #d6d4e0;
 }
 .btn_developers:hover {
