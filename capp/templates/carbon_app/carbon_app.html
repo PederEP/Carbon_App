@@ -1,78 +1,73 @@
-/* Colors 
-Carbon App, section 1 (header, background): #2a4359
-Carbon App, section 1 (header, boxes): #6da6a6
-Carbon App, section 2 (header, background): #466fa6
-Carbon App, section 2 (header, boxes): #8badd9
-*/
+{% extends "layout.html" %}
+{% block content %}
 
-/* Utilities  */
-p {
-  margin: 10px 0;
-  font-size: 18px;
-  text-align: left;
-}
-h4 {
-  font-size: 18px;
-  text-align: left;
-  font-weight: bold;
-}
-/* Section header */
-.section_header_carbon_app {
-  background-color:#EDF1D6;
-}
-.header_carbon_app {
-  display: flex;  
-  align-items: start;
-  background: #EDF1D6;
-}
-.header_carbon_app .box {
-  flex: 1;
-  background: #EDF1D6;
-  color: #000;
-  border-radius: 10px;
-  margin: 20px 10px;
-  padding: 15px 20px;
-  text-align:center;
-  align-items: center;
-  justify-content: center;
+    <!-- Header -->
+    <section class="section_header_carbon_app">
+        <div class="container">
     
-}
-.header_carbon_app .box:nth-of-type(1) {
-  flex-grow:2;
-}
-.header_carbon_app .box:nth-of-type(2) {
-  flex-grow:1;
-}
-.btn-1 {
-  display: inline-block;
-  padding: 9px 13px;
-  font-size: 22px;
-  cursor: pointer;
-  text-align: right;
-  text-decoration: none;
-  outline: none;
-  color: #EDF1D6;
-  background-color: #254762;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 7px #999;
-  margin: 12px;
-  
-}
-  
-.btn:hover {
-  background-color: #254762e5;
-  color: #EDF1D6;
-}
-  
-.btn:active {
-  background-color: #254762;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
+        <div class="header_carbon_app">
+            <div class="box"> 
+            <h1 style="font-size:55px;"><span class="text-logo"> Carbon App Calculator</span></h1>
+            <p style="text-align:left;">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat dolores quos asperiores repellendus facilis cum illo aperiam odit doloremque nostrum. Totam excepturi labore voluptatibus iusto sapiente quisquam consectetur optio magnam voluptates omnis vel officia alias distinctio quas laborum reiciendis ratione inventore veniam, cupiditate doloribus dolore, eius natus a. Magni inventore consequuntur voluptas reprehenderit perferendis! Molestias aspernatur rem autem aut temporibus.
+            </p>
+            <div class="container_buttons_links_header_carbon_app">
+                <div class="buttons">
+                    <a href="{{url_for('methodology.methodology_home')}}" class="btn btn-1" >Methodology</a>
+                </div>
+                <div class="buttons">
+                    <a href="#" class="btn btn-primary btn-lg mr-2", class="btn btn-1">Instructions</a>
+                </div>
+                <div class="buttons">
+                    <a href="{{url_for('carbon_app.new_entry')}}" class="btn btn-1">New entry</a>
+                </div>
+                <div class="buttons">
+                    <a href="{{url_for('carbon_app.your_data')}}" class="btn btn-1" >Your data</a>
+                </div>
+            </div>  
+            <!-- Modal Instructions -->
+            <div class="modal fade" id="carbon_app_instructions" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+          
+                    <div class="modal-header">
+                    <h5 class="modal-title", style="color:black; text-align: center;">Carbon App, instructions</h5>
+                    </div>
+          
+                    <div class="modal-body", style="color:black">
+                    <p style="text-align: left;">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae ratione tempore id esse nobis molestias quasi explicabo possimus ea reprehenderit.
+                    </p>
+                    <ol style="text-align:left;">
+                        <li>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, sint.
+                        </li>
+                        <li>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, sint.
+                        </li>
+                    </ol>
+                    </div>
+          
+                    <div class="modal-footer">
+                        <a href="{{url_for('carbon_app.new_entry')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">New entry</a>
+                        <button class="btn btn-secondary btn-lg mr-2", style="background-color:#6c757d;" data-dismiss="modal">Close</button>
+                    </div>
+          
+                </div>
+                </div>
+            </div>
+            </div>
+            <div class="box">
+            <img 
+                src="{{url_for('static', filename='icons/car-svgrepo.png')}}"
+                width="300" 
+                height="380"
+                alt=""/>
+            </div>
+        </div>
+        
+        </div>
+    </section> 
+       
 
-@media (max-width:768px) { 
-  .header_carbon_app {
-    flex-direction: column;
-  } 
-}
+{% endblock content %}
