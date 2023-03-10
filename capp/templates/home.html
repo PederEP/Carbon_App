@@ -1,114 +1,159 @@
-<!DOCTYPE html>
-<html>
-    <head>
-      <!-- Font Awesome code -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% extends "layout.html" %}
+{% block content %}
 
-      <!--Import the Bootstrap CSS file:-->
-      <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-      crossorigin="anonymous"
-      />
-      <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
-      />
+<!-- Header -->
+<section class="section_header_home">
+  <div class="container">
 
-      <!-- Matjax -->
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-      
-      <!-- CSS code -->
-      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='layout.css') }}">
-      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
-      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='methodology.css') }}">
-      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='carbon_app.css') }}">
-
-      <!-- Global CSS for define color and adopt it for all part of App -->
-      <style>
-        /* If you want to use colors write like this -> background-color: var(--main-bg-color); */
-        :root{
-          --main-background-color: #edf1d6;
-          --second-background-color: #9dc088;
-          --main-primary-color: #f7bd4e;
-          --main-header-color: #84a8b3;
-          --main-spare-color: #254762;
-          --main-text-color: #40513B;
-        }
-      </style>
-
-      <!-- To activate media queries in devices -->
-      <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1">
-
-        {% if title %}
-            <title>{{ title }}</title>
-        {% else %}
-            <title>home</title>
-        {% endif %}
-        
-    </head>
-    <body>
-        <section class="section_carbon_app_navbar">
-          <div class="container">
-            <div class="carbon_app_navbar">
-              <h1 class="logo">
-                <span class="text-logo"><i class="fa-regular fa-compass"></i> Carbon Compass</span> 
-              </h1>
-              <nav>
-                <ul>
-                    </li>
-                    <li>
-                        <a href="{{url_for('home.home_home')}}"><i class="fa-solid fa-house"></i> Home</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('methodology.methodology_home')}}"><i class="fa-solid fa-magnifying-glass"></i> Methology</a>
-                    </li>
-                    <li>
-                        <a href="{{url_for('carbon_app.carbon_app_home')}}"><i class="fa-solid fa-calculator"></i> Carbon App</a>
-                    </li>
-                    <li>
-                      <a href="{{url_for('users.register')}}"></i> Register</a>
-                    </li>
-                    <li>
-                      <a href="{{url_for('users.login')}}"></i> Login</a>
-                </ul>
-              </nav> 
-            </div>
+    <div class="header_home">
+      <div class="box"> 
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div> 
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h1 style="font-size:55px;"><span class="text-logo"> Home</span></h1>
+        <p style="text-align:left;">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat dolores quos asperiores repellendus facilis cum illo aperiam odit doloremque nostrum. Totam excepturi labore voluptatibus iusto sapiente quisquam consectetur optio magnam voluptates omnis vel officia alias distinctio quas laborum reiciendis ratione inventore veniam, cupiditate doloribus dolore, eius natus a. Magni inventore consequuntur voluptas reprehenderit perferendis! Molestias aspernatur rem autem aut temporibus.
+        </p>
+        <div class="container_buttons_links_header_home">
+          <div class="btn">
+              <a href="{{url_for('users.register')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Register</a>
           </div>
-        </section>
-
-        {% block content %} {% endblock %}
-
-        <section class="section_footer">
-          <div class="container">
-            <div class="footer">
-              <h1>
-                Back to top 
-                <a href="#">
-                  <i class="fa-solid fa-circle-up" style="color: #333"></i>
-                </a>
-              </h1>
-            </div>
+          <div class="btn">
+              <a href="{{url_for('users.login')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Login</a>
           </div>
-        </section>
+        </div>  
+      </div>
+      <div class="box">
+        <img 
+          src="{{url_for('static', filename='icons/save-energy-svgrepo-com.png')}}"
+          width="280" 
+          height="400"
+          alt=""/>
+      </div>
+    </div>
 
-        <!-- Bootstrap -->
-        <!-- Question Accordion -->
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-          crossorigin="anonymous"
-        ></script>
+  </div>
+</section> 
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Developers -->
+<section class="section_developers">
+  <div class="container">
+
+    <div class="developers" style="display:block;">
+      <h1 style="text-align:center;"> Our Team</h1>
+      <p>
+        Our team of economists and developers ... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, ut? Praesentium quidem sunt perspiciatis doloremque fugiat nesciunt quaerat ullam, pariatur iure unde ratione ipsum adipisci repellendus, repudiandae hic sit, temporibus molestias corrupti aut soluta sequi! Architecto deleniti expedita nisi repudiandae enim eum quas odit facilis placeat neque porro, animi incidunt consectetur. Maiores ab saepe tempora, iure asperiores beatae suscipit cum ipsum, rerum doloremque reprehenderit dolorum debitis, aliquam quasi. Maiores corporis fuga quasi nesciunt dolor iste, inventore necessitatibus unde!
+      </p>      
+    </div>
+
+    <div class="developers">
+        <div class="box">
+          <img 
+          src="{{url_for('static', filename='icons/magnus.jpg')}}"
+          width="200" 
+          height="200"
+          alt=""style="border-radius: 50%; width:200px;">
+          <h3>Magnus</h3>
+          <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
+          </p>
+          <div class="section_container_buttons_developers">
+            <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+          </div> 
+        </div>
+        <div class="box">
+          <img 
+          src="{{url_for('static', filename='icons/mina.png')}}"
+          width="200" 
+          height="200"
+          alt=""style="border-radius: 50%; width:200px;">
+          <h3>Mina</h3>
+          <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
+          </p>
+          <div class="section_container_buttons_developers">
+            <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+          </div> 
+        </div>           
+        <div class="box">
+          <img 
+          src="{{url_for('static', filename='icons/peder.jpg')}}"
+          width="200" 
+          height="200"
+          alt=""style="border-radius: 50%; width:200px;">
+          <h3>Peder</h3>
+          <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
+          </p>
+          <div class="section_container_buttons_developers">
+            <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+          </div> 
+        </div>     
+    </div>
+
+    <div class="developers">
+      <div class="box">
+        <img 
+        src="{{url_for('static', filename='icons/augustin.jpg')}}"
+        width="200" 
+        height="200"
+        alt=""style="border-radius: 50%; width:200px;">
+        <h3>Augustin</h3>
+        <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
+        </p>
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+        </div> 
+      </div>
+      <div class="box">
+        <img 
+        src="{{url_for('static', filename='icons/keita.jpg')}}"
+        width="200" 
+        height="200"
+        alt=""style="border-radius: 50%; width:200px;">
+        <h3>Keita</h3>
+        <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
+        </p>
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+        </div> 
+      </div>           
+      <div class="box">
+        <img 
+        src="{{url_for('static', filename='icons/lena.jpg')}}"
+        width="200" 
+        height="200"
+        alt=""style="border-radius: 50%; width:200px;">
+        <h3>Lena</h3>
+        <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
+        </p>
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+        </div> 
+      </div>     
+  </div>
+  <div class="developers">
+    <div class="box">
+      <img 
+      src="{{url_for('static', filename='icons/brock.png')}}"
+      width="200" 
+      height="200"
+      alt=""style="border-radius: 50%; width:200px;">
+      <h3>Brock</h3>
+      <p>  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quia repellat omnis? Odit enim hic atque dolorem iste natus inventore perspiciatis vitae dolore animi veritatis aut nemo unde similique, officia reiciendis ex architecto voluptates soluta ab tempore facilis quisquam cum.
+      </p>
+      <div class="section_container_buttons_developers">
+        <a class="btn_developers" href="#"  target="_blank">Curriculum</a>
+      </div> 
+    </div>
+    <div class="box">
+    </div>           
+    <div class="box">
+  </div>          
+</section>
         
-    </body>
-</html>
+{% endblock content %}
 
