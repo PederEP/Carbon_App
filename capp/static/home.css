@@ -12,6 +12,9 @@ p {
 }
 /* Section header_home */
 .section_header_home {
+  background-color:#EDF1D6;
+}
+.section_header_home {
   background: color #EDF1D6;;
 }
 .header_home {
@@ -70,11 +73,13 @@ p {
 .developers {
   display: flex;  
   align-items: start;
-  background: #9DC088 ;
+  background: #EDF1D6;
+  margin-top: 20px;
+  border-radius: 15px;
 }
 .developers .box {
   flex: 1;
-  background:  #EDF1D6;
+  background:  #CEE5D0;
   color: black;
   border-radius: 10px;
   margin: 20px 10px;
