@@ -17,7 +17,7 @@ Navbar (a menu): #2a4359
 }
 body {
   font-family: 'Roboto', sans-serif;
-  background: #466fa6;
+  background: #84A8B3;
   line-height: 1.6;
 }
 .container {
@@ -45,7 +45,7 @@ img {
 }
 /* Navbar  */
 .section_carbon_app_navbar {
-  background-color:#607D8B;
+  background-color:#84A8B3;
 }
 .carbon_app_navbar {
   display: flex;
@@ -53,7 +53,7 @@ img {
   justify-content: flex-start;
   height: 70px;
   align-items: center;
-  background-color: #607D8B;
+  background-color: #84A8B3;
   padding: 0 0px;
 }
 .carbon_app_navbar a {
@@ -65,6 +65,8 @@ img {
 }
 .carbon_app_navbar a:hover{
   border-bottom: #333  4px solid;
+  color: black;
+  font-weight: bold; 
 }
 .carbon_app_navbar ul {
   display: flex;
@@ -78,7 +80,7 @@ img {
 }
 /* Footer  */
 .section_footer{
-  background-color:#607D8B;
+  background-color:#84A8B3;
 }
 .footer {
   display: flex;
@@ -86,7 +88,7 @@ img {
   justify-content: center;
   height: 70px;
   align-items: center;
-  background-color: #607D8B;
+  background-color: #84A8B3;
   padding: 0 0px;
 }
 
