@@ -19,12 +19,15 @@
         <h1 style="font-size:55px;"><span class="text-logo"> Home</span></h1>
         <p style="text-align:left;">
           Hi, welcome to our carbon emissions calculator app! Our mission is to empower individuals and businesses to make informed decisions about their carbon footprint and take action to reduce their impact on the environment. Our app is easy to use and provides personalized recommendations for reducing emissions based on your specific lifestyle or business practices. By tracking your carbon emissions, you can make meaningful changes to reduce your impact on the planet and contribute to a more sustainable future. Join us in taking action to protect our planet today!        </p>
-        <div class="container">
+        {% if current_user.is_authenticated %}
+        {% else %}
+          <div class="container">
           <div class="buttons">
               <a href="{{url_for('users.register')}}" class="btn btn-1"> Register </a>
               <a href="{{url_for('users.login')}}" class="btn btn-1">Login </a>
           </div>
-        </div>  
+        </div>
+        {% endif %}  
       </div>
       <div class="box">
         <img 
@@ -154,6 +157,4 @@
 </section>
         
 {% endblock content %}
-
-
 

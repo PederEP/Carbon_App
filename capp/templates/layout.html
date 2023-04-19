@@ -57,6 +57,25 @@
               <h1 class="logo">
                 <span class="text-logo"><i class="fa-regular fa-compass"></i> Carbon</span> Compass
               </h1>
+              {%if current_user.is_authenticated %}
+              <nav>
+                <ul>
+                    </li>
+                    <li>
+                        <a href="{{url_for('home.home_home')}}"><i class="fa-solid fa-house"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('methodology.methodology_home')}}"><i class="fa-solid fa-magnifying-glass"></i> Methology</a>
+                    </li>
+                    <li>
+                        <a href="{{url_for('carbon_app.carbon_app_home')}}"><i class="fa-solid fa-calculator"></i> Carbon App</a>
+                    </li>
+                    <li>
+                      <a href="{{url_for('users.logout')}}"><i class="fa-regular fa-newspaper"></i> Logout</a>
+                    </li>
+                </ul>
+              </nav> 
+              {% else %}
               <nav>
                 <ul>
                     </li>
@@ -76,6 +95,7 @@
                       <a href="{{url_for('users.login')}}"><i class="fa-regular fa-user"></i> Login</a>
                 </ul>
               </nav> 
+              {% endif %}
             </div>
           </div>
         </section>
