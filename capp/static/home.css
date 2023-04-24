@@ -12,20 +12,24 @@ p {
 }
 /* Section header_home */
 .section_header_home {
-  background-color:#EDF1D6;
+  background-color: #95BFA4;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  align-items: center;
+  border-radius: 10px;
 }
-.section_header_home {
-  background: color #EDF1D6;;
-}
+
 .header_home {
   display: flex;  
   align-items: start;
-  background: #EDF1D6;
+  background: #95BFA4;
   margin-bottom: 50px;
 }
 .header_home .box {
   flex: 1;
-  background: #EDF1D6;
+  background: #95BFA4;
   color: #000;
   border-radius: 10px;
   margin: 20px 10px ;
@@ -69,18 +73,18 @@ p {
 
 /* Section developers */
 .section_developers {
-  background-color:#9DC088;
+  background-color:#F6F6F6;
 }
 .developers {
   display: flex;  
   align-items: start;
-  background: #EDF1D6;
+  background: #95BFA4;
   border-radius: 15px;
   padding: 20px;
 }
 .developers .box {
   flex: 1;
-  background:  #CEE5D0;
+  background:  #C9DBCD;
   color: black;
   border-radius: 10px;
   margin: 4px 30px;

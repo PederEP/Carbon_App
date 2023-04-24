@@ -62,7 +62,7 @@
           <div class="container">
             <div class="carbon_app_navbar">
               <h1 class="logo">
-                <span class="text-logo"><i class="fa-regular fa-compass"></i> Carbon</span> Compass
+                <img src="{{url_for('static', filename='icons/carbon-compass-logo.png') }}" alt="Logo">
               </h1>
               {%if current_user.is_authenticated %}
               <nav>
@@ -77,8 +77,10 @@
                     <li>
                         <a href="{{url_for('carbon_app.carbon_app_home')}}"><i class="fa-solid fa-calculator"></i> Carbon App</a>
                     </li>
+                  </nav> 
+                    <nav>
                     <li>
-                      <a href="{{url_for('users.logout')}}"><i class="fa-regular fa-newspaper"></i> Logout</a>
+                      <a href="{{url_for('users.logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a><p text="text-align-left"></p>
                     </li>
                 </ul>
               </nav> 
@@ -112,6 +114,19 @@
         <section class="section_footer">
           <div class="container">
             <div class="footer">
+              <h1>You can also visit us on our social media!</h1>
+              <br>
+              <div class="social-media-icons">
+                <a href="#">
+                  <i class="fab fa-instagram fa-3x"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-facebook fa-3x"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-twitter fa-3x"></i>
+                </a>
+              </div>
               <h1>
                 Back to top 
                 <a href="#">
@@ -122,6 +137,7 @@
           </div>
         </section>
 
+        
         <!-- Bootstrap -->
         <!-- Question Accordion -->
         <script
