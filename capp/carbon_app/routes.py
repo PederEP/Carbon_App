@@ -259,7 +259,7 @@ def your_data():
     emissions_by_transport = db.session.query(db.func.sum(Transport.total), Transport.transport). \
         filter(Transport.date > (datetime.now() - timedelta(days=5))).filter_by(author=current_user). \
         group_by(Transport.transport).order_by(Transport.transport.asc()).all()
-    emission_transport = [0, 0, 0, 0, 0, 0, 0, 0]
+    emission_transport = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     first_tuple_elements = []
     second_tuple_elements = []
     for a_tuple in emissions_by_transport:

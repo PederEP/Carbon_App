@@ -13,22 +13,18 @@
 
           </div>
           <div class="box">
-              {% with messages = get_flashed_messages(with_categories=true) %}
-                  {% if messages %}
-                  <meta http-equiv="refresh" content="5;url={{ request.path }}">
-                  <ul class="flash-messages">
-                      {% for category, message in messages %}
-                      <li class="flash-message {{ message[1] }}">{{ message[0] }}</li>
-                          <div class="alert alert-{{ category }}">
-                              {{ message }}
-                              <br>
-                              {{form.email.data}}
-                              <br>
-                              {{form.password.data}}
-                          </div> 
-                      {% endfor %}
-                  {% endif %}
-              {% endwith %}
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <meta http-equiv="refresh" content="5;url={{ request.path }}">
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div> 
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+              
               <form method="POST" action="">
                   {{ form.hidden_tag() }}
                       <fieldset class="form-group">

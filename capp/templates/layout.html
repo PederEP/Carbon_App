@@ -79,11 +79,12 @@
                     </li>
                   </nav> 
                     <nav>
-                    <li>
-                      <a href="{{url_for('users.logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a><p text="text-align-left"></p>
-                    </li>
-                </ul>
-              </nav> 
+                      <ul class="nav-far-right">
+                        <li>
+                          <a href="{{url_for('users.logout')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+                        </li>
+                      </ul>
+                    </nav> 
               {% else %}
               <nav>
                 <ul>
@@ -97,13 +98,17 @@
                     <li>
                         <a href="{{url_for('carbon_app.carbon_app_home')}}"><i class="fa-solid fa-calculator"></i> Carbon App</a>
                     </li>
-                    <li>
-                      <a href="{{url_for('users.register')}}"><i class="fa-regular fa-newspaper"></i> Register</a>
-                    </li>
-                    <li>
-                      <a href="{{url_for('users.login')}}"><i class="fa-regular fa-user"></i> Login</a>
-                </ul>
-              </nav> 
+                  </nav> 
+                    <nav>
+                      <ul class="nav-right">
+                        <ul>
+                          <a href="{{url_for('users.register')}}"><i class="fa-regular fa-address-card"></i> Register</a>
+                        </ul>
+                        <ul>
+                          <a href="{{url_for('users.login')}}"><i class="fa-regular fa-user"></i> Login</a>
+                        </ul>
+                      </ul>
+                    </nav> 
               {% endif %}
             </div>
           </div>
@@ -117,7 +122,7 @@
               <h1>You can also visit us on our social media!</h1>
               <br>
               <div class="social-media-icons">
-                <a href="#">
+                <a href="https://www.instagram.com/carbon.compass/" target="_blank">
                   <i class="fab fa-instagram fa-3x"></i>
                 </a>
                 <a href="#">
@@ -125,6 +130,9 @@
                 </a>
                 <a href="#">
                   <i class="fab fa-twitter fa-3x"></i>
+                </a>
+                <a href="#">
+                  <i class="fab fa-tiktok fa-3x"></i>
                 </a>
               </div>
               <h1>
@@ -137,7 +145,6 @@
           </div>
         </section>
 
-        
         <!-- Bootstrap -->
         <!-- Question Accordion -->
         <script

@@ -145,3 +145,22 @@ img {
   .social-media-icons a {
     margin-right: 40px;
   }
+  .carbon_app_navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  .carbon_app_navbar nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .carbon_app_navbar nav ul li {
+    margin-left: 20px;
+  }
+  
+  .carbon_app_navbar nav ul li:first-child {
+    margin-left: 0;
+  }

@@ -19,14 +19,20 @@ h4 {
 /* Section header */
 .section_header_carbon_app {
   background-color:#f9f8f6;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  align-items: center;
+  border-radius: 10px;
 }
 .header_carbon_app {
   display: flex;  
   align-items: start;
   background: #DED0F2;
   border-radius: 15px;
-  margin-left: -50px;
-  margin-right: -50px;
+  margin-left: -150px;
+  margin-right: -150px;
 }
 .header_carbon_app .box {
   flex: 1;
@@ -177,11 +183,11 @@ h4 {
 /*Container table_main */
 .table_main {
   display: flex;
-  background: #c5c8d9;
+  background: #f9f8f6;
   }  
 .table_main .container {
   display: flex;
-  background: #c5c8d9;
+  background: #f9f8f6;
 }
 .table_main .container {
   display: flex;
@@ -190,7 +196,7 @@ h4 {
 }
 .table_main .container .box {
   flex: 1;
-  background: #c5c8d9;
+  background: #f9f8f6;
   border-radius: 2px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -225,11 +231,11 @@ h4 {
 /*Container two_emissions_graphs */
 .two_emissions_graphs {
   display: flex;
-  background: #c5c8d9;
+  background: #f9f8f6;
   }  
 .two_emissions_graphs .container {
   display: flex;
-  background: #c5c8d9;
+  background: #f9f8f6;
 }
 .two_emissions_graphs .container {
   display: flex;
@@ -238,7 +244,7 @@ h4 {
 }
 .two_emissions_graphs .container .box {
   flex: 1;
-  background: #c5c8d9;
+  background: #f9f8f6;
   border-radius: 2px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -246,7 +252,7 @@ h4 {
 }  
 .two_emissions_graphs .container  .box:nth-of-type(1) {
   flex-grow:1;
-  background: #568c63;
+  background: #95BFA4;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -254,7 +260,7 @@ h4 {
 }  
 .two_emissions_graphs .container  .box:nth-of-type(2) {
   flex-grow:1;
-  background: #568c63;
+  background: #95BFA4;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -278,7 +284,7 @@ h4 {
 }
 .main_menu .container .box {
   flex: 1;
-  background: #c5c8d9;
+  background: #f9f8f6;
   border-radius: 2px;
   margin: 20px 10px;
   padding: 15px 20px;
