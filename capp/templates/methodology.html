@@ -9,12 +9,15 @@
         <div class="box"> 
           <h1 style="font-size:55px;"><span class="text-logo"> Methodology</span></h1>
           <p style="text-align:left;">
-            The carbon app is a tool we have designed to help people measure and track their carbon emissions. To do this, the app is based on this methodology, or a set of steps, to provide an estimate of how much CO2 is being emitted through different types of transportation.
+            The carbon app is a tool we have designed to help people measure and track their carbon emissions. To do this, the app is based on this methodology, or a set of steps, to provide an estimate of how much CO2 is being emitted through different means of transportation.
             <br>
             <br>
-            To use the carbon emission app, the users need to provide the necessary data and put it into the app. For example, is someone takes a car ride, the app will need to know how far they traveled, what type of car they were driving, and what kind of fuel the car uses.
-            Once the app has collected this information, it uses formulas to estimate the amount of carbon emissions produced by the activity. The formulas is presented further down in this page.
-        </p>
+            For the app to be able to calculate the carbon
+            emission, the user must provide some data. To demonstrate, if you want to calculate the carbon emission for
+            a specific car ride, you need to provide the distance, type of car (electric, diesel, or gasoline), and the
+            number of passengers. Once the app collects the user-provided data, it uses formulas to estimate carbon
+            emissions.
+            </p>
           
           <div class="container">
             <div class="butons">
@@ -55,28 +58,47 @@
 
         <!--Enumerated list (table with two columns)-->
         <div class="methodology"> 
-            <div class="box_table2" style="height:400px;">
+            <div class="box_table2" style="height:650px;">
                 <ol start="1">
                     <li>
-                        <h4>Formula with number of passengers </h4>
+                        <h4>General formula </h4>
                         <p class="text-left">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor porro id at expedita nostrum harum culpa excepturi, velit sed iusto similique sunt hic ullam. Excepturi ab, sunt quod repudiandae ducimus, delectus, quas est ipsam maiores rem consectetur odit. Numquam quaerat perferendis soluta blanditiis tenetur, aperiam doloribus quisquam? Inventore, hic totam?
+                            In order to provide our customers with an accurate amount of carbon emissions, the application will be
+                            based on one general formula. The formula is derived from the emission factor, which easily includes fossil
+                            fuel based transportation. 
                             <br>
-                            \[\frac{\text{Distance traveld (km) * g}\text{CO}_{2}/\text{km}}{\text{Number of passengers}} \]
+                            \[\text{CO}_{2}=d*\frac{ef}{p}\]
+                            <br>
+                            In witch:
+                               \[\text{CO}_2 \text{ = carbon emissions in grams} \]
+                               \[\text{d} \text{ = distance traveled in km} \]
+                               \[\text{ef} \text{ = emission factor in CO}_2 \text{/km} \]
+                               \[\text{d} \text{ = distance traveled in km} \]
 
                         </p>
                     </li>
                 </ol>                        
             </div>
-            <div class="box_table2" style="height:400px;">
+            <div class="box_table2" style="height:650px;">
                 <ol start="2">
                     <li>
-                        <h4>Formula with number of passengers:</h4>
+                        <h4>Formula for electrical transportation modes</h4>
                         <p class="text-left">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem iure ipsa officiis, dignissimos iste temporibus eligendi veniam eum ullam sed minima, sint tenetur cum explicabo vero? Ipsam excepturi, maiores et sapiente quae suscipit dignissimos deserunt ad accusamus quis at unde enim tempore deleniti voluptatum numquam, officiis amet fugit repellendus quisquam.                            
+                            The application uses a carbon intensity of 31 gCO2/kWh; this is based on data from the past year
+                            (Electricity Maps, n.d.). But what is carbon intensity? Carbon intensity is used to evaluate the cleaness of the
+                            electricity produced and is thus expressed in grams of CO2 per kWh (National Grid Group, n.d.).
+                            Due to the different ways of producing electricity;
+                            think about nuclear, coal, wind, gas, etc. Together with the energy consumption, a variable based on the
+                            transportation mode, this is essentially the replacement of the emission factor which is used in the fossil fuel
+                            formula. Thus you could inherently say that:                            
                             <br>
+                            \[ \text{ef = 31 * ec} \]
                             <br>
-                            \[\text{Distance traveld (km) * g}\text{CO}_{2}/\text{pkm} \]
+                            In witch:
+                               \[\text{ef} \text{ = emission factor in CO}_2 \text{/km} \]
+                               \[\text{31} \text{ = dcarbon intensity in gCO}_2 \text{/kwh} \]
+                               \[\text{ec} \text{ = energy consumption in kWh} \text{/km} \]
+
                         </p>
                     </li>
                 </ol>
@@ -85,43 +107,35 @@
 
         <!--Enumerated list (table with two columns)-->
         <div class="methodology"> 
-            <div class="box_table2" style="height:425px;">
+            <div class="box_table2" style="height:400px;">
                 <ol start="3">
                     <li>
                         <h4>Car</h4>
                         <p class="text-left">
-                            Based on the information provided by the Statistic Central Bureau of Norway (SSB, 2016), we will use the following data: 
-                            <br>
+                            Based on information provided by the Statistic Central Bureau of
+                            Norway (SSB, 2016) and Electric Vehicle Database (EV Database, n.d.), we will use the following data: 
+                        <br>
                             \[ \to \text{Petrol}: \text{156,47g} \text{CO}_{2}/\text{km} \]
                             \[\to \text{Diesel}: \text{130g} \text{CO}_{2}/\text{km} \]
-                    </li>
-                    <li>
-                        <h4> Motorcycle</h4> 
-                        <p class="text-left">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus, labore.
-                            <br>
-                            \[ \to  \text{85,20g} \text{CO}_{2}/\text{km} \]
-                        </p>
+                            \[\to \text{Energy consumption}: \text{0,199kwh/km} \]
+                            \[\circ  \text{ 6.17g CO}_2 \text{/km}\]
+
                     </li>
                 </ol>                        
             </div>
-            <div class="box_table2" style="height:425px;">
+            <div class="box_table2" style="height:400px;">
                 <ol start="5">
                     <li>
-                        <h4>Airplane</h4>
+                        <h4>Ferry</h4>
                         <p class="text-left">
-                            The airplane is probably one of the most ‘feared’ ways of traveling when looking at the carbon emission per person. However, when taking into account the amount of passengers, it is not much worse than driving your car by yourself.
+                            We found information on the carbon emissions of fuel oil ferries in which the number of
+                            passengers is already taken into account (Helle, 2022). For the E-ferry it took some more effort since the
+                            energy consumption needed to be calculated based on the information of E-ferry Ellen (E-ferry project,
+                            n.d.).                            
                             <br>
-                            \[\to \text{133g} \text{CO}_{2}/\text{pkm} \]
-                        </p>
-                    </li>
-                    <li>
-                    <h4>Ferry</h4>
-                    <p class="text-left">
-                        Ferry is a common public transportation mode in Norway. We found information on the carbon emissions of ferries in which the number of passengers is already taken into account ​(Helle, 2022)​. 
-                        <br>
-                        \[\to \text{170g} \text{CO}_{2}/\text{pkm} \]
-                    </p>
+                            \[ \to \text{Heavy Fuel Oil}: \text{170g} \text{CO}_{2}/\text{pkm} \]
+                            \[ \to \text{E-ferry}: \text{0.196 kWh} \text{/pkm} \]
+                            \[\circ  \text{ 6.08g CO}_2 \text{/pkm}\]
                         </p>
                     </li>
                 </ol>
@@ -130,45 +144,70 @@
 
                 <!--Enumerated list (table with two columns)-->
         <div class="methodology"> 
-            <div class="box_table2" style="height:425px;">
+            <div class="box_table2" style="height:400px;">
                 <ol start="7">
                     <li>
-                        <h4>Walk</h4>
+                        <h4>Ferry</h4>
                         <p class="text-left">
-                            Since we are developing the application in Norway, we decided to base ourselves on the Norwegian source  (Jonas André Hansen, 2019)
+                            When looking up the carbon emissions for the train, they differed a bit per country. However, since the
+                            application is focussed on use in Bergen, it will use information from the 2022 annual report of Vy (“When
+                            Every Journey Counts,” 2022). It states that all of the trains Vy uses are electrical so the application will
+                            only provide this option.                           
                             <br>
-                            \[\to \text{0g} \text{CO}_{2}/\text{pkm} \]
+                            \[ \to \text{Electrical}: \text{10g} \text{CO}_{2}/\text{pkm} \]
                             <br>
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Cycle</h4>
-                        <p class="text-left">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, dolore?
-                            <br>
-                            \[\to \text{0g} \text{CO}_{2}/\text{pkm} \]
                         </p>
                     </li>
                 </ol>                        
             </div>
-            <div class="box_table2" style="height:425px;">
+            <div class="box_table2" style="height:400px;">
                 <ol start="9">
                     <li>
-                        <h4>Train</h4>
+                        <h4>Airplane</h4>
                         <p class="text-left">
-                            Since we are developing the application in Norway, we decided to base ourselves on the Norwegian source  (Jonas André Hansen, 2019)
-                            <br>
-                            \[\to \text{5,5g} \text{CO}_{2}/\text{pkm} \]
+                            Since the grams of CO2/km match those provided by Future in our hands for an economy
+                            class flight (Helle, 2022) the application will calculate the carbon emissions based on the following:                             <br>
+                            \[ \to \text{Kerosine}: \text{133g} \text{CO}_{2}/\text{pkm} \]
                         </p>
                     </li>
+                </ol>
+            </div>  
+        </div>
+
+         <!--Enumerated list (table with two columns)-->
+         <div class="methodology"> 
+            <div class="box_table2" style="height:400px;">
+                <ol start="7">
                     <li>
                         <h4>Bus</h4>
                         <p class="text-left">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, nisi?
+                            Bus transportation in Bergen is organized by both Skyss and Vy. Since Skyss does not provide any
+                            information about the climate footprint of their transportation, the application will use data provided by Vy
+                            (“When Every Journey Counts,” 2022). Their buses run on 3 different types of fuel; diesel, biodiesel and
+                            electrical.                         
                             <br>
-                            \[\to \text{Diesel}: \text{27g} \text{CO}_{2}/\text{pkm} \]
-                            \[\to \text{100% biodiesel}: \text{14g} \text{CO}_{2}/\text{pkm} \]
+                            \[ \to \text{Diesel}: \text{27g} \text{CO}_{2}/\text{pkm} \]
+                            \[\to \text{Biodisel}: \text{14g} \text{CO}_{2}/\text{pkm} \]
+                            \[\to \text{Electrical}: \text{13g} \text{CO}_{2}/\text{pkm} \]
+                
                             <br>
+                        </p>
+                    </li>
+                </ol>                        
+            </div>
+            <div class="box_table2" style="height:400px;">
+                <ol start="9">
+                    <li>
+                        <h4>Motorcycle</h4>
+                        <p class="text-left">
+                            Most motorcycles run on petrol, however there are some electrical motorcycle alternatives. For the carbon
+                            emissions produced by a petrol fueled motorcycle, the data will be based on information gathered by the
+                            SSB (SSB, 2016). For the electric motorcycle, calculations will be based on information and data gathered
+                            from a comparative study (Koossalapeerom et al., 2016).                         
+                            <br>
+                            \[ \to \text{Petrol}: \text{85,2g} \text{CO}_{2}/\text{km} \]
+                            \[\to \text{Energy consumption}: \text{0,28 kwh/km} \]
+                            \[\circ  \text{ 0.87g CO}_2 \text{/km}\]
                         </p>
                     </li>
                 </ol>
@@ -181,12 +220,12 @@
             <div class="box_table1">
                 <ol>
                     <li>
-                        <h4>Total sum & presentation</h4>
+                        <h4>Walking and cycling</h4>
                         <p class="text-left">
-                            The <strong>carbon dioxide emissions</strong> produced by buses are organized in <strong>four categories</strong>. The carbon dioxide emission produced by diesel buses is 0.10231 grammes per kilometer. The carbon dioxide emission produced by CNG buses is 0.08 grammes per kilometer. The carbon dioxide emission produced by petrol buses is 0.10231 grammes per kilometer. If the buses do not use fossil fuel, their dioxide carbon emissions are 0 grammes per kilometer.
-                            <br>
-                            To work out buses dioxide emissions, we use the next formula:
-                            \[CO^2 = {Cte + \sqrt{f(km)} \over t}.\]
+                            Besides the transportation modes mentioned above, the application will also provide the option of
+                            registering walking and cycling. Both of these transportation modes do not produce any carbon emissions so
+                            no calculations are needed. Nevertheless, the app will consider the kilometers traveled by walking and
+                            cycling. This will be shown in the charts and tables.
                             <br>
                             Where:
                             <ul style="text-align:left;">
@@ -206,18 +245,7 @@
                             
                         </p>
                     </li>
-                    <li>
-                        <h4>Cars</h4>
-                        <p class="text-left">
-                            ...
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Planes</h4>
-                        <p class="text-left">
-                            ...
-                        </p>
-                    </li>
+                    
                 </ol>                        
             </div>
         
