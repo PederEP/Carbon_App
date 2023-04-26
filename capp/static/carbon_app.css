@@ -18,17 +18,18 @@ h4 {
 }
 /* Section header */
 .section_header_carbon_app {
-  background-color:#466fa6;
+  background-color:#f9f8f6;
 }
 .header_carbon_app {
   display: flex;  
   align-items: start;
-  background: #466fa6;
+  background: #DED0F2;
+  border-radius: 15px;
 }
 .header_carbon_app .box {
   flex: 1;
-  background: #466fa6;
-  color: #fff;
+  background: #DED0F2;
+  color: #40513B;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -42,36 +43,44 @@ h4 {
 .header_carbon_app .box:nth-of-type(2) {
   flex-grow:1;
 }
-.container_buttons_links_header_carbon_app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap:wrap;
+.btn {
+  display: inline-block;
+  padding: 9px 13px;
+  font-size: 22px;
+  cursor: pointer;
+  text-align: right;
+  text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: #FF7B00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 7px #999;
+  margin: 15px;
 }
-.container_buttons_links_header_carbon_app a:hover {
-  color: #466fa6;
+  
+.btn:hover {
+  background-color: #db6d06;
+  color: #EDF1D6;
 }
-.container_buttons_links_header_carbon_app btn {
-  width: 100px;
-  height: 100px;
-  background: #466fa6;
-  color: #fff;
-  display: flex;
-  justify-content:center;
-  align-items:center;
+  
+.btn:active {
+  background-color: #db700dd8;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 /* Section carbon_app_new_entry_main */
 .section_carbon_app_new_entry_main {
-  background-color:#c5c8d9;
+  background-color:#f9f8f6;
 }
 .carbon_app_new_entry_main {
   display: flex;  
   align-items: start;
-  background: #c5c8d9;
+  background: #f9f8f6;
 }
 .carbon_app_new_entry_main .box {
   flex: 1;
-  background: #254762;
+  background: #DED0F2;
   color: black;
   border-radius: 10px;
   margin: 20px 10px;
@@ -112,8 +121,8 @@ h4 {
 }
 .btn_carbon_app_new_entry_main:hover {
   color: #fff;
-  background-color: #2a4359;
-  border: 2px solid #2a4359;
+  background-color: #FF7B00;
+  border: 2px solid #FF7B00;
   text-decoration: none;
 }
 /*Container new_entry */
