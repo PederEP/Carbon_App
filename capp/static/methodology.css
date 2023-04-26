@@ -68,12 +68,12 @@ ol {
 }
   
 .btn:hover {
-  background-color: #254762e5;
+  background-color: #db700dd8;
   color: #EDF1D6;
 }
   
 .btn:active {
-  background-color: #254762;
+  background-color: #db700dd8;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
