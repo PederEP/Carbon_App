@@ -53,7 +53,7 @@ p {
   text-decoration: none;
   outline: none;
   color: #EDF1D6;
-  background-color: #254762;
+  background-color: #db700dd8;
   border: none;
   border-radius: 15px;
   box-shadow: 0 7px #999;
@@ -61,7 +61,7 @@ p {
 }
   
 .btn:hover {
-  background-color: #254762e5;
+  background-color: #db700dd8;
   color: #EDF1D6;
 }
   
