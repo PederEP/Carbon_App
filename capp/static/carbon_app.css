@@ -124,8 +124,7 @@ h4 {
   border-radius: 5px;
   text-decoration: none;
   font-size: 18px;
-  background-color: #84A8B3;
-  border: 2px solid  #2a4359;
+  background-color: #FF7B00;
 }
 .btn_carbon_app_new_entry_main:hover {
   color: #fff;
@@ -136,11 +135,11 @@ h4 {
 /*Container new_entry */
 .new_entry {
   display: flex;
-  background: #c5c8d9;
+  background: #f9f8f6;
   }  
 .new_entry .container {
   display: flex;
-  background: #c5c8d9;
+  background: #f9f8f6;
 }
 .new_entry .container {
   display: flex;
@@ -149,7 +148,7 @@ h4 {
 }
 .new_entry .container .box {
   flex: 1;
-  background: #c5c8d9;
+  background: #f9f8f6;
   border-radius: 2px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -166,7 +165,7 @@ h4 {
 .new_entry .container  .box:nth-of-type(2) {
   flex-grow:6;
   max-width: 450px;
-  background: #568c63;
+  background: #568c90;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -212,7 +211,7 @@ h4 {
 }  
 .table_main .container  .box:nth-of-type(2) {
   flex-grow:6;
-  background: #568c63;
+  background: #568c90;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -252,7 +251,7 @@ h4 {
 }  
 .two_emissions_graphs .container  .box:nth-of-type(1) {
   flex-grow:1;
-  background: #95BFA4;
+  background: #568c90;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -260,7 +259,7 @@ h4 {
 }  
 .two_emissions_graphs .container  .box:nth-of-type(2) {
   flex-grow:1;
-  background: #95BFA4;
+  background: #568c90;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -271,11 +270,11 @@ h4 {
 /*Container main menu */
 .main_menu {
   display: flex;
-  background: #c5c8d9;
+  background: #f9f8f6;
   }  
 .main_menu .container {
   display: flex;
-  background: #c5c8d9;
+  background: #f9f8f6;
 }
 .main_menu .container {
   display: flex;
@@ -301,7 +300,7 @@ h4 {
 .main_menu .container  .box:nth-of-type(2) {
   flex-grow:6;
   max-width: 450px;
-  background: #568c63;
+  background: #568c90;
   border-radius: 10px;
   margin: 20px 10px;
   padding: 15px 20px;
@@ -324,7 +323,7 @@ h4 {
   flex-wrap:wrap;
 }
 .container_buttons_links_main_menu a:hover {
-  color: #568c63;
+  color: #568c90;
 }
 /*End container buttons section main menu*/
 
