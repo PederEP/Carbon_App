@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<!-- Header -->
+<section class="section_header_home">
+  <div class="container">
+
+    <div class="header_home">
+      <div class="box"> 
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div> 
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h1 style="font-size:55px;"><span class="text-logo"> Home</span></h1>
+        <p style="text-align:left;">
+          Hi, welcome to our carbon emissions calculator app! Our mission is to empower individuals and businesses to make informed decisions about their carbon footprint and take action to reduce their impact on the environment. Our app is easy to use and provides personalized recommendations for reducing emissions based on your specific lifestyle or business practices. By tracking your carbon emissions, you can make meaningful changes to reduce your impact on the planet and contribute to a more sustainable future. Join us in taking action to protect our planet today!        </p>
+        {% if current_user.is_authenticated %}
+        {% else %}
+          <div class="container">
+          <div class="buttons">
+              <a href="{{url_for('users.register')}}" class="btn btn-1"> Register </a>
+              <a href="{{url_for('users.login')}}" class="btn btn-1">Login </a>
+          </div>
+        </div>
+        {% endif %}  
+      </div>
+      <div class="box">
+        <img 
+          src="{{url_for('static', filename='icons/compass-svgrepo.svg')}}"
+          width="280" 
+          height="400"
+          alt=""/>
+      </div>
+    </div>
+
+  </div>
+</section> 
+
+<!-- Developers -->
+<section class="section_developers">
+  <div class="container">
+
+    <div class="developers" style="display:block;">
+      <h1 style="text-align:center;"> Our Team</h1>
+      <p>
+        Our team is composed of a diverse group of economists and developers from different nationalities and backgrounds, all united by a passion for sustainability and innovation. Our team members bring unique perspectives and experiences to the table, enabling us to approach challenges from a variety of angles and find creative solutions to complex problems. We believe that diversity is not only crucial for building a strong team but also for creating a better future for all. Meet our team on our website, where we introduce each member and their expertise. If you want to learn more or have any questions, feel free to reach out to us on Facebook. We look forward to connecting with you and working together towards a more sustainable world.      </p>      
+    </div>
+
+    <div class="developers">
+        <div class="box">
+          <img 
+          src="{{url_for('static', filename='icons/magnus.jpg')}}"
+          width="200" 
+          height="200"
+          alt=""style="border-radius: 50%; width:200px;">
+          <h3>Magnus</h3>
+          <p>  
+            I am a 22-year-old who loves working out and hanging out with friends. I'm passionate about fitness and enjoy trying out new workout routines at the gym. When I'm not working out, I like to spend time with my friends and explore new places to eat or hang out. I'm currently studying business at HVL and work as a salesman          </p>
+          <div class="section_container_buttons_developers">
+            <a class="btn_developers" href="https://www.facebook.com/magnus.vevle"  target="_blank"><i class="fa-brands fa-facebook"></i> facebook</a>
+          </div> 
+        </div>
+        <div class="box">
+          <img 
+          src="{{url_for('static', filename='icons/mina.png')}}"
+          width="200" 
+          height="200"
+          alt=""style="border-radius: 50%; width:200px;">
+          <h3>Mina</h3>
+          <p>  
+            I am s 21-year-old girl from Oslo who loves to hike, work out, and spend time with her friends. Growing up in the bustling city of Oslo, I developed a love for nature and the outdoors, which I satisfy by going on hikes and explore the beautiful Norwegian countryside. But I value spending time with my friends the most.         </p>
+          <div class="section_container_buttons_developers">
+            <a class="btn_developers" href="https://www.facebook.com/profile.php?id=100009930134831"  target="_blank"><i class="fa-brands fa-facebook"></i> facebook</a>
+          </div> 
+        </div>           
+        <div class="box">
+          <img 
+          src="{{url_for('static', filename='icons/peder.jpg')}}"
+          width="200" 
+          height="200"
+          alt=""style="border-radius: 50%; width:200px;">
+          <h3>Peder</h3>
+          <p>  Hey, I'm Peder Porsvik, a 23-year-old who's passionate about weightlifting. I'm a very sociable person, but I also value my alone time. Currently, I'm studying my second year of Bachelor in Economics and Administration at HVL. I enjoy challenging myself and pushing my limits to become the overall best version of myself.
+          </p>
+          <div class="section_container_buttons_developers">
+            <a class="btn_developers" href="https://www.facebook.com/pedereugen.porsvik"  target="_blank"><i class="fa-brands fa-facebook"></i> facebook</a>
+          </div> 
+        </div>     
+    </div>
+
+    <div class="developers">
+      <div class="box">
+        <img 
+        src="{{url_for('static', filename='icons/Augustin.png')}}"
+        width="200" 
+        height="200"
+        alt=""style="border-radius: 50%; width:200px;">
+        <h3>Augustin</h3>
+        <p>  
+          I am 21 years old, my name is Gus and i'm curious of everything. I love ski, surf, skate and other riding sports. I do also some climbing and I enjoy hiking. Mainly, I love challenge. And i'm passionate of all the culture. I also read lot and astrophysics is/was a hobby. About my studies, i'm in third year of an international business school.
+        </p>
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="https://www.facebook.com/profile.php?id=100011507229588"  target="_blank"><i class="fa-brands fa-facebook"></i> facebook</a>
+        </div> 
+      </div>
+      <div class="box">
+        <img 
+        src="{{url_for('static', filename='icons/keita.jpg')}}"
+        width="200" 
+        height="200"
+        alt=""style="border-radius: 50%; width:200px;">
+        <h3>Keita</h3>
+        <p>  
+          I am exchange student from Japan. I am 22 years old and studying business in HVL and linguistics in Kansai university. Designer is my main job and UI and UX are my major part. I love to North Europe design such as universal design. Also I like to travel north Europe countries to find good design.
+        </p>
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="https://www.facebook.com/keita.ueda.315"  target="_blank"><i class="fa-brands fa-facebook"></i> facebook</a>
+        </div> 
+      </div>           
+      <div class="box">
+        <img 
+        src="{{url_for('static', filename='icons/lena.jpg')}}"
+        width="200" 
+        height="200"
+        alt=""style="border-radius: 50%; width:200px;">
+        <h3>Lena</h3>
+        <p>  I'm Lena, 19 years old, born and raised in Belgium where I study International Business Management. Besides my studies I work(ed) as a barista which I really enjoy. In the free time I have, I love to be active in every way possible, both outdoors and indoors.
+        </p>
+        <div class="section_container_buttons_developers">
+          <a class="btn_developers" href="https://www.facebook.com/lena.maes.733"  target="_blank"><i class="fa-brands fa-facebook"></i> facebook</a>
+        </div> 
+      </div>     
+  </div>
+  <div class="developers">
+    <div class="box">
+      <img 
+      src="{{url_for('static', filename='icons/Brocks_App.img.png')}}"
+      width="200" 
+      height="200"
+      alt=""style="border-radius: 50%; width:200px;">
+      <h3>Brock</h3>
+      <p>  Hello my name is Brock Cunningham. I am from Seattle, USA and my home University is Western Washington University. I love to ski, lift, game, and camp with my friends. I will get my major in enviromental studies with a minor in economics.
+      </p>
+      <div class="section_container_buttons_developers">
+        <a class="btn_developers" href="https://www.facebook.com/profile.php?id=100084370098603"  target="_blank"><i class="fa-brands fa-facebook"></i> facebook</a>
+      </div> 
+    </div>
+    <div class="box">
+    </div>           
+    <div class="box">
+  </div>          
+</section>
+        
+{% endblock content %}
+
