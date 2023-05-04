@@ -18,13 +18,20 @@ h4 {
 }
 /* Section header */
 .section_header_carbon_app {
-  background-color:#f9f8f6;
+  background-color:#DED0F2;
   margin-top: 20px;
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 50px;
   align-items: center;
   border-radius: 10px;
+}
+
+.header_carbon_app {
+  display: flex;  
+  align-items: start;
+  background: #DED0F2;
+  margin-bottom: 50px;
 }
 .header_carbon_app {
   display: flex;  
