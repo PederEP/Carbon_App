@@ -11,23 +11,21 @@ carbon_app=Blueprint('carbon_app',__name__)
 
 #Emissions factor per transport in kg per passenger km
 #Data from: http://efdb.apps.eea.europa.eu/?source=%7B%22query%22%3A%7B%22match_all%22%3A%7B%7D%7D%2C%22display_type%22%3A%22tabular%22%7D
-efco2={'Bus':{'Diesel':0.10231 ,'CNG':0.08,'Petrol':0.10231,'No Fossil Fuel':0},
-    'Car':{'Petrol':0.15647,'Diesel':0.13,'No Fossil Fuel':0},
-    'Plane':{'Petrol':0.24298},
-    'Ferry':{'Diesel':0.11131, 'CNG':0.1131, 'No Fossil Fuel':0},
-    'Motorbike':{'Petrol':0.09816,'No Fossil Fuel':0},
-    'Scooter':{'No Fossil Fuel':0},
-    'Train':{'No Fossil Fuel':0},
+efco2={'Bus':{'Diesel':0.027 ,'Biodiesel':0.014,'Electric':0.013},
+    'Car':{'Petrol':0.15647,'Diesel':0.13,'Electric':0.00617},
+    'Plane':{'Kerosine':0.133},
+    'Ferry':{'Heavy Fuel Oil':0.170, 'Electric':0.00608},
+    'Motorbike':{'Petrol':0.0852,'Electric':0.0087},
+    'Train':{'Electric':0.01},
     'Bicycle':{'No Fossil Fuel':0},
     'Walk':{'No Fossil Fuel':0}}
 
-efch4={'Bus':{'Diesel':2e-5,'CNG':2.5e-3,'Petrol':2e-5,'No Fossil Fuel':0},
-    'Car':{'Petrol':3.1e-4,'Diesel':3e-6,'No Fossil Fuel':0},
-    'Plane':{'Petrol':1.1e-4},
-    'Ferry':{'Diesel':3e-5, 'CNG':3e-5,'No Fossil Fuel':0},
-    'Motorbike':{'Petrol':2.1e-3,'No Fossil Fuel':0},
-    'Train':{'No Fossil Fuel':0},
-    'Scooter':{'No Fossil Fuel':0},
+efch4={'Bus':{'Diesel':0 ,'Biodiesel':0,'Electric':0},
+    'Car':{'Petrol':0,'Diesel':0,'Electric':0},
+    'Plane':{'Kerosine':0},
+    'Ferry':{'Heavy Fuel Oil':0, 'Electric':0},
+    'Motorbike':{'Petrol':0,'Electric':0},
+    'Train':{'Electric':0},
     'Bicycle':{'No Fossil Fuel':0},
     'Walk':{'No Fossil Fuel':0}}
 
@@ -350,29 +348,17 @@ def your_data():
     else:
         kms_transport[5]
 
-    if 'Scooter' in second_tuple_elements:
-        index_scooter = second_tuple_elements.index('Scooter')
-        kms_transport[6]=first_tuple_elements[index_scooter]
-    else:
-        kms_transport[6] 
-
     if 'Train' in second_tuple_elements:
         index_train = second_tuple_elements.index('Train')
-        kms_transport[7]=first_tuple_elements[index_train]
+        kms_transport[6]=first_tuple_elements[index_train]
     else:
-        kms_transport[7]   
+        kms_transport[6]   
 
     if 'Walk' in second_tuple_elements:
         index_walk = second_tuple_elements.index('Walk')
         kms_transport[7]=first_tuple_elements[index_walk]
     else:
         kms_transport[7]   
-
-    if 'Train' in second_tuple_elements:
-        index_train = second_tuple_elements.index('Train')
-        kms_transport[8]=first_tuple_elements[index_train]
-    else:
-        kms_transport[8]   
 
     #Emissions by date (individual)
     emissions_by_date = db.session.query(db.func.sum(Transport.total), Transport.date). \

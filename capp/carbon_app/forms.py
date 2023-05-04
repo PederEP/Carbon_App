@@ -5,31 +5,31 @@ from wtforms.validators import InputRequired
 class BusForm(FlaskForm):
   kms = FloatField('Kilometers', [InputRequired()])
   fuel_type = SelectField('Type of Fuel', [InputRequired()], 
-    choices=[('Diesel', 'Diesel'), ('CNG', 'CNG'), ('Petrol', 'Petrol'), ('No Fossil Fuel', 'No Fossil Fuel')])
+    choices=[('Diesel', 'Diesel'), ('Biodiesel', 'Biodiesel'), ('Electric', 'Electric')])
   submit = SubmitField('Submit')
 
 class CarForm(FlaskForm):
   kms = FloatField('Kilometers', [InputRequired()])
   fuel_type = SelectField('Type of Fuel', [InputRequired()], 
-    choices=[('Petrol', 'Petrol'), ('Diesel', 'Diesel'), ('No Fossil Fuel', 'No Fossil Fuel')])
+    choices=[('Petrol', 'Petrol'), ('Diesel', 'Diesel'), ('Electric', 'Electric')])
   submit = SubmitField('Submit')  
 
 class PlaneForm(FlaskForm):
   kms = FloatField('Kilometers', [InputRequired()])
   fuel_type = SelectField('Type of Fuel', [InputRequired()], 
-    choices=[('Petrol', 'Petrol')])
+    choices=[('Kerosine', 'Kerosine')])
   submit = SubmitField('Submit')
   
 class FerryForm(FlaskForm):
   kms = FloatField('Kilometers', [InputRequired()])
   fuel_type = SelectField('Type of Fuel', [InputRequired()], 
-    choices=[('Diesel', 'Diesel'), ('CNG', 'CNG'), ('No Fossil Fuel', 'No Fossil Fuel')])
+    choices=[('Heavy Fuel Oil', 'Heavy Fuel Oil'), ('Electric', 'Electric')])
   submit = SubmitField('Submit')  
 
 class MotorbikeForm(FlaskForm):
   kms = FloatField('Kilometers', [InputRequired()])
   fuel_type = SelectField('Type of Fuel', [InputRequired()], 
-    choices=[('Petrol', 'Petrol'), ('No Fossil Fuel', 'No Fossil Fuel')])
+    choices=[('Petrol', 'Petrol'), ('Electric', 'Electric')])
   submit = SubmitField('Submit')
 
 class BicycleForm(FlaskForm):
@@ -47,5 +47,5 @@ class WalkForm(FlaskForm):
 class TrainForm(FlaskForm):
   kms = FloatField('Kilometers', [InputRequired()])
   fuel_type = SelectField('Type of Fuel', [InputRequired()], 
-    choices=[('No Fossil Fuel', 'No Fossil Fuel')])
+    choices=[('Electric', 'Electric')])
   submit = SubmitField('Submit')

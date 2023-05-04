@@ -1,6 +1,3 @@
-
- 
-
 /* Colors 
 Methodology, section 1 (header, background): #2a4359
 Methodology, section 1 (header, boxes): #6da6a6
@@ -31,7 +28,7 @@ ol {
   align-items: center;
   border-radius: 10px;
 }
-
+ 
 .header {
   display: flex;  
   align-items: start;
